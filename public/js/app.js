@@ -13,23 +13,14 @@ weatherform.addEventListener('submit', (e) => {
     pesanSatu.textContent = 'Sedang mencari lokasi ..' 
     pesanDua.textContent = '' 
 
-    fetch('http://localhost:5000/infoCuaca?address=' + location)
-    .then((response) => {
-        console.log('Response Status:', response.status); // Log status
-        return response.json();
-    })
-    .then((data) => {
-        console.log('Data Received:', data); // Log data yang diterima
-        if (data.error) {
-            pesanSatu.textContent = data.error;
-        } else {
-            pesanSatu.textContent = data.lokasi;
-            pesanDua.textContent = data.prediksiCuaca;
-        }
-    })
-    .catch((error) => {
-        console.error('Error fetching data:', error); // Log error jika ada
-        pesanSatu.textContent = 'Terjadi kesalahan saat menghubungi server.';
+    fetch('/infoCuaca?address=' + location).then((response) => {
+        response.json().then((data) => {
+            if (data.error) {
+                pesanSatu.textContent = data.error; // Tampilkan error jika ada
+            } else {
+                pesanSatu.textContent = data.lokasi; // Tampilkan lokasi
+                pesanDua.textContent = data.prediksiCuaca; // Tampilkan prediksi cuaca
+            }
+        });
     });
-
-}) 
+});
