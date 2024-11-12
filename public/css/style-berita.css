@@ -1,0 +1,173 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya dasar untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background: url('/img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header, footer {
+    background: linear-gradient(90deg, #1e63b3, #147fbc); /* Gradient yang lebih cerah */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #002d4d; /* Garis bawah */
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 2.5em; /* Ukuran font yang lebih besar untuk judul */
+    color: white; /* Warna teks judul */
+    margin-bottom: 10px; /* Jarak di bawah judul */
+}
+
+
+.nav-penjelasan {
+    display: flex; /* Mengatur navigasi dalam baris */
+    justify-content: center; /* Memusatkan tautan navigasi */
+    gap: 15px; /* Jarak antar tautan */
+}
+
+.nav-penjelasan a {
+    color: white; /* Warna teks tautan */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    padding: 10px 15px; /* Padding untuk tautan */
+    border-radius: 5px; /* Sudut melengkung pada tautan */
+    transition: background-color 0.3s ease; /* Transisi halus */
+}
+
+.nav-penjelasan a:hover {
+    background-color: #0b2924; /* Warna latar belakang saat hover */
+}
+
+/* Konten utama */
+.main-content {
+    width: 100vw; /* Memenuhi lebar viewport */
+    height: 100vh; /* Memenuhi tinggi viewport */
+    margin: 0; /* Hilangkan margin */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8); /* Transparansi untuk latar belakang */
+    box-shadow: none; /* Hilangkan shadow agar tampilannya lebih clean */
+    border-radius: 0; /* Hilangkan radius agar mengikuti tepi layar */
+    text-align: center;
+    position: relative;
+    height: calc(100vh - 60px); /* Kurangi tinggi footer */
+    overflow-y: auto; /* Tambahkan scroll jika konten .main-content melebihi layar */
+}
+
+/* Bagian Berita */
+.news-section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.read-more {
+    color: #1e63b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Bagian Berlangganan */
+.subscribe-section {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-section form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #1e63b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #147fbc;
+}
+
+.content-section {
+    line-height: 1.7;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section p:hover {
+    background: #d1ecf1;
+    border-color: #47494c;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: glow 1s infinite alternate; /* Animasi glow saat hover */
+}
+
+
+/* Footer full sampai ke bawah */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0; /* Kurangi padding jika perlu agar tidak terlalu besar */
+    background: #083b3d;
+    color: white;
+    text-align: center;
+    z-index: 1; /* Pastikan berada di atas .background-image */
+}
+
+
