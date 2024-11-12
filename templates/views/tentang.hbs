@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{judul}}</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/style-tentang.css">
+    <!-- Menghubungkan Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="main-content">
+        {{>header}}
+        <div class="profile-section">
+            <img src="/img/chindy.jpg" alt="Foto Pengembang" class="profile-pic">
+            <h2>{{nama}}</h2>
+            <p>Mahasiswi Informatika di Universitas Negeri Padang</p>
+            <p><em>"Untungnyaaa bumi masih berputar."</em></p>
+        </div>
+        <div class="about-section">
+            <h3>Tentang Saya</h3>
+            <p>Saya adalah seorang mahasiswi yang antusias dalam bidang pengembangan aplikasi dan analisis data. Memiliki ketertarikan khusus pada teknologi web dan pembelajaran mesin. Saat ini, saya sedang bekerja pada proyek aplikasi cuaca yang memanfaatkan Node.js dan Handlebars.</p>
+        </div>
+        <div class="skills-section">
+            <h3>Keterampilan</h3>
+            <ul>
+                <li>Pengembangan Web (HTML, CSS, JavaScript, Node.js)</li>
+                <li>Analisis Data (Python, Pandas, Statistik)</li>
+                <li>Pemrograman Berorientasi Objek (Java, C++)</li>
+                <li>Desain UI/UX (Figma)</li>
+            </ul>
+        </div>
+        <div class="contact-section">
+            <h3>Kontak</h3>
+            <p>
+                <i class="fas fa-envelope"></i> 
+                Email: <a href="mailto:chindyrahmawati775@gmail.com">chindyrahmawati775@gmail.com</a>
+            </p>
+            <p>
+                <i class="fab fa-linkedin"></i> 
+                LinkedIn: <a href="https://www.linkedin.com/in/chindy-rahmawati-8024b3281/" target="_blank">linkedin.com/in/chindy-rahmawati</a>
+            </p>
+            <p>
+                <i class="fab fa-github"></i> 
+                GitHub: <a href="https://github.com/chyraa" target="_blank">github.com/chyraa</a>
+            </p>
+        </div>
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </div>
+</body>
+</html>
